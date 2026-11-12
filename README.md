@@ -108,6 +108,9 @@
   It is recommended to store `JWT_SECRET` as a **Secret** rather than as a plain-text variable. `JWT_SECRET` is a sensitive runtime credential and should not be committed to the repository.  
   If your deployment process recreates or overwrites the Worker variable configuration, ordinary variables may be affected. Secrets are more appropriate for sensitive configuration that needs to remain available across multiple deployments. If the application still reports that `JWT_SECRET` is missing after a redeployment, check **Variables and Secrets** for the current Worker and make sure the Secret is still configured.
 
+- **Do pull requests trigger Cloudflare builds?**  
+  Yes. When the Cloudflare Workers Builds GitHub integration is connected, every pull request gets a preview build before merge, and the build status is reported back to GitHub as a check on the pull request. The production deployment itself is only updated when the connected branch (typically `main`) receives new commits.
+
 ---
 
 ## How to update
