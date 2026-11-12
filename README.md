@@ -116,6 +116,7 @@
 ## How to update
 
 - Manual: open your fork on GitHub; when the sync banner appears, click **Sync fork** → **Update branch**
+- Git integration: if you connected the repository to Cloudflare Workers Builds, pushing to the production branch (or merging a PR) triggers a build and deploy automatically — check the deployment source in the Cloudflare dashboard to confirm it came from `git push`
 
 
 
